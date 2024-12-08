@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.054s</div>
+<div class="counter">0.085s</div>
 <p>duration</p>
 </div>
 </td>
@@ -957,42 +957,42 @@ use `coupon` [90079-214]
 </thead>
 <tr>
 <td class="failures">email_check_fail_test()</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.010s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">email_check_test()</td>
-<td class="failures">0.008s</td>
+<td class="failures">0.011s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">join_fail_400_test()</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.012s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">join_fail_exist_email_test()</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.010s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">join_test()</td>
-<td class="failures">0.013s</td>
+<td class="failures">0.007s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">login_fail_400_test()</td>
-<td class="failures">0.009s</td>
+<td class="failures">0.007s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">login_fail_test()</td>
-<td class="failures">0.004s</td>
+<td class="failures">0.018s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">login_test()</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.010s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -1000,13 +1000,13 @@ use `coupon` [90079-214]
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-09-08 07:00:58.230  INFO 21185 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.user.UserRestControllerTest], using SpringBootContextLoader
-2024-09-08 07:00:58.230  INFO 21185 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.kakao.user.UserRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-09-08 07:00:58.230  INFO 21185 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.kakao.user.UserRestControllerTest]: UserRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-09-08 07:00:58.233  INFO 21185 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.user.UserRestControllerTest
-2024-09-08 07:00:58.234  INFO 21185 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-09-08 07:00:58.234  INFO 21185 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@359b4846, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@79122f5f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5f59b6c5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@77c41838, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1872a7fe, org.springframework.test.context.support.DirtiesContextTestExecutionListener@70720b78, org.springframework.test.context.transaction.TransactionalTestExecutionListener@628f642d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@381db99e, org.springframework.test.context.event.EventPublishingTestExecutionListener@58545c2e, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4163f505, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@19cad9f0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4cce421e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3681c285, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6894d28d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@27de9336, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@19beeb61]
-2024-09-08 07:00:58.238  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.login_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@6f5d292c]
+<pre>2024-12-08 22:18:21.234  INFO 66585 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.user.UserRestControllerTest], using SpringBootContextLoader
+2024-12-08 22:18:21.235  INFO 66585 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.kakao.user.UserRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-12-08 22:18:21.235  INFO 66585 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.kakao.user.UserRestControllerTest]: UserRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-08 22:18:21.241  INFO 66585 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.user.UserRestControllerTest
+2024-12-08 22:18:21.242  INFO 66585 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-12-08 22:18:21.242  INFO 66585 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@51aa8c0f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@25bbca43, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@74cd82f1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@632a7680, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@66e5441e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1df77353, org.springframework.test.context.transaction.TransactionalTestExecutionListener@535b016, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@79122f5f, org.springframework.test.context.event.EventPublishingTestExecutionListener@5f59b6c5, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@77c41838, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1872a7fe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70720b78, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@628f642d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@355da59c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@381db99e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@58545c2e]
+2024-12-08 22:18:21.253  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.login_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@19cad9f0]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1111,7 +1111,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.243  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.join_fail_400_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@6f55aef7]
+2024-12-08 22:18:21.263  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.join_fail_400_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@6894d28d]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1216,7 +1216,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.249  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.login_fail_400_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@5f72aaed]
+2024-12-08 22:18:21.277  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.login_fail_400_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@21139739]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1321,7 +1321,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.264  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.join_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@2700f556]
+2024-12-08 22:18:21.289  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.join_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@524241d9]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1426,7 +1426,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.273  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.email_check_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@2b0483f2]
+2024-12-08 22:18:21.298  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.email_check_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@1ffe7c42]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1531,7 +1531,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.279  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.join_fail_exist_email_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@27381497]
+2024-12-08 22:18:21.309  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.join_fail_exist_email_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@4b708c16]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1636,7 +1636,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.284  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.email_check_fail_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@4922dc84]
+2024-12-08 22:18:21.322  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.email_check_fail_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@64dbb343]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1741,7 +1741,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.290  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@355da59c] for test method [public void com.example.kakao.user.UserRestControllerTest.login_fail_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@3796ff4]
+2024-12-08 22:18:21.336  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@359b4846] for test method [public void com.example.kakao.user.UserRestControllerTest.login_fail_test() throws java.lang.Exception] and test instance [com.example.kakao.user.UserRestControllerTest@1e40edb7]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
@@ -1857,7 +1857,7 @@ use `coupon` [90079-214]
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.0</a> at Sep 8, 2024, 7:00:58 AM</p>
+<a href="http://www.gradle.org">Gradle 8.0</a> at Dec 8, 2024, 10:18:21 PM</p>
 </div>
 </div>
 </body>

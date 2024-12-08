@@ -46,4 +46,11 @@ public class UserService {
             throw new Exception400("동일한 이메일이 존재합니다 : " + email);
         }
     }
+
+    public Integer findUserIdByEmail(String email) {
+        return userJPARepository.findByEmail(email)
+                .map(User::getId)  // 그대로 Integer로 반환
+                .orElse(null);
+    }
+
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.kakao.cart.CartRestControllerTest" tests="11" skipped="0" failures="11" errors="0" timestamp="2024-09-07T22:00:58" hostname="masters-MacBook-Pro.local" time="0.158">
+<testsuite name="com.example.kakao.cart.CartRestControllerTest" tests="11" skipped="0" failures="11" errors="0" timestamp="2024-12-08T13:18:20" hostname="masters-MacBook-Pro.local" time="0.303">
   <properties/>
-  <testcase name="addCartList_fail_not_found_option_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.079">
+  <testcase name="addCartList_fail_not_found_option_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.092">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -211,7 +211,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="update_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.006">
+  <testcase name="update_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.008">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -316,7 +316,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="update_fail400_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.007">
+  <testcase name="update_fail400_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.011">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -421,7 +421,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="addCartList_fail400_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.008">
+  <testcase name="addCartList_fail400_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.014">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -526,7 +526,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="findAllNotAuthorization_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.007">
+  <testcase name="findAllNotAuthorization_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.016">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -631,7 +631,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="update_cart_404_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.007">
+  <testcase name="update_cart_404_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.015">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -736,7 +736,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="update_duplicated_options_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.012">
+  <testcase name="update_duplicated_options_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.024">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -841,7 +841,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="addCartList_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.008">
+  <testcase name="addCartList_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.073">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -946,7 +946,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="update_not_found_option_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.005">
+  <testcase name="update_not_found_option_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.008">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -1051,7 +1051,7 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="findAll_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.005">
+  <testcase name="findAll_test()" classname="com.example.kakao.cart.CartRestControllerTest" time="0.009">
     <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
 use `coupon` [90079-214]
 	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
@@ -1156,20 +1156,20 @@ use `coupon` [90079-214]
 	... 83 more
 </failure>
   </testcase>
-  <system-out><![CDATA[07:00:55.445 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-07:00:55.450 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-07:00:55.469 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.kakao.cart.CartRestControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-07:00:55.473 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.cart.CartRestControllerTest], using SpringBootContextLoader
-07:00:55.475 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTest-context.xml] does not exist
-07:00:55.475 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTestContext.groovy] does not exist
-07:00:55.475 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.kakao.cart.CartRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-07:00:55.475 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.kakao.cart.CartRestControllerTest]: CartRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-07:00:55.540 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/master/coupon/shop-back/build/classes/java/main/com/example/kakao/KakaoApplication.class]
-07:00:55.541 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.cart.CartRestControllerTest
-07:00:55.573 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.kakao.cart.CartRestControllerTest]: using defaults.
-07:00:55.573 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-07:00:55.583 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6865c751, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62679465, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6a988392, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1d71006f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5b6813df, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5f2606b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2b58f754, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2552f2cb, org.springframework.test.context.event.EventPublishingTestExecutionListener@33352f32, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@5f3b9c57, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1e044120, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2cf23c81, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3624da92, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35fe2125, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@94f6bfb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34645867]
-07:00:55.585 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@f9879ac testClass = CartRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@37f21974 testClass = CartRestControllerTest, locations = '{}', classes = '{class com.example.kakao.KakaoApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@386f0da3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@63da64fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@388526fb, [ImportsContextCustomizer@5f4d427e key = [@org.springframework.test.context.ActiveProfiles(profiles={}, resolver=org.springframework.test.context.ActiveProfilesResolver.class, value={"test"}, inheritProfiles=true), @org.springframework.test.context.jdbc.Sql(executionPhase=BEFORE_TEST_METHOD, statements={}, scripts={}, value={"classpath:db/teardown.sql"}, config=@org.springframework.test.context.jdbc.SqlConfig(blockCommentStartDelimiter="", commentPrefix="", transactionMode=DEFAULT, blockCommentEndDelimiter="", commentPrefixes={}, errorMode=DEFAULT, transactionManager="", encoding="", separator="", dataSource="")), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value="spring.test.mockmvc", skip=NO), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value={}, exclude={}, classes={}), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs(uriScheme="http", outputDir="", uriPort=80, value="", uriHost="localhost"), @org.springframework.context.annotation.Import({org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.class}), @org.springframework.boot.test.context.SpringBootTest(args={}, webEnvironment=MOCK, value={}, properties={}, classes={}), @org.springframework.context.annotation.Import({org.springframework.boot.test.autoconfigure.restdocs.RestDocumentationContextProviderRegistrar.class}), @org.springframework.test.context.BootstrapWith(org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value="spring.test.restdocs", skip=NO)]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@f316aeb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e2ff723, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2b4c1d96, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@247d8ae], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+  <system-out><![CDATA[22:18:17.623 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+22:18:17.627 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+22:18:17.645 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.kakao.cart.CartRestControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+22:18:17.649 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.cart.CartRestControllerTest], using SpringBootContextLoader
+22:18:17.652 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTest-context.xml] does not exist
+22:18:17.652 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTestContext.groovy] does not exist
+22:18:17.652 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.kakao.cart.CartRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:18:17.652 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.kakao.cart.CartRestControllerTest]: CartRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:18:17.716 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/master/Desktop/coupon-project/kakaoshop-BE/build/classes/java/main/com/example/kakao/KakaoApplication.class]
+22:18:17.717 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.cart.CartRestControllerTest
+22:18:17.758 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.kakao.cart.CartRestControllerTest]: using defaults.
+22:18:17.758 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22:18:17.765 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5df417a7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c041b41, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7f69d591, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@61078690, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1cb3ec38, org.springframework.test.context.support.DirtiesContextTestExecutionListener@403132fc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@71c5b236, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2f7a7219, org.springframework.test.context.event.EventPublishingTestExecutionListener@669513d8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3a1d593e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4a8a60bc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@361c294e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7859e786, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@285d851a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@314b8f2d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@664a9613]
+22:18:17.768 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1fc0053e testClass = CartRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@290b1b2e testClass = CartRestControllerTest, locations = '{}', classes = '{class com.example.kakao.KakaoApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1a760689, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@63da64fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@32f232a5, [ImportsContextCustomizer@47874b25 key = [@org.springframework.test.context.jdbc.Sql(executionPhase=BEFORE_TEST_METHOD, statements={}, scripts={}, value={"classpath:db/teardown.sql"}, config=@org.springframework.test.context.jdbc.SqlConfig(blockCommentStartDelimiter="", commentPrefix="", transactionMode=DEFAULT, blockCommentEndDelimiter="", commentPrefixes={}, errorMode=DEFAULT, transactionManager="", encoding="", separator="", dataSource="")), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value="spring.test.mockmvc", skip=NO), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value="spring.test.restdocs", skip=NO), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value={}, exclude={}, classes={}), @org.springframework.context.annotation.Import({org.springframework.boot.test.autoconfigure.restdocs.RestDocumentationContextProviderRegistrar.class}), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs(uriScheme="http", outputDir="", uriPort=80, value="", uriHost="localhost"), @org.springframework.boot.test.context.SpringBootTest(args={}, webEnvironment=MOCK, value={}, properties={}, classes={}), @org.springframework.test.context.ActiveProfiles(profiles={}, resolver=org.springframework.test.context.ActiveProfilesResolver.class, value={"test"}, inheritProfiles=true), @org.springframework.test.context.BootstrapWith(org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.springframework.context.annotation.Import({org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.class})]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@495fac5f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3212a8d7, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@13d73fa, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@35aea049], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -1179,132 +1179,132 @@ use `coupon` [90079-214]
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.6)
 
-2024-09-08 07:00:55.731  INFO 21185 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Starting CartRestControllerTest using Java 17.0.12 on masters-MacBook-Pro.local with PID 21185 (started by master in /Users/master/coupon/shop-back)
-2024-09-08 07:00:55.731 DEBUG 21185 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Running with Spring Boot v2.7.6, Spring v5.3.24
-2024-09-08 07:00:55.732  INFO 21185 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : The following 1 profile is active: "test"
-2024-09-08 07:00:56.049  INFO 21185 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08 07:00:56.078  INFO 21185 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 7 JPA repository interfaces.
-2024-09-08 07:00:56.378  INFO 21185 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08 07:00:56.406  INFO 21185 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-09-08 07:00:56.475  INFO 21185 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-09-08 07:00:56.486 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@203b953c
-2024-09-08 07:00:56.486 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@203b953c
-2024-09-08 07:00:56.486 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@203b953c
-2024-09-08 07:00:56.487 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1b1252c8
-2024-09-08 07:00:56.487 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@5873f3f0
-2024-09-08 07:00:56.487 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@652e345
-2024-09-08 07:00:56.488 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@7a55fb81
-2024-09-08 07:00:56.488 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@7a55fb81
-2024-09-08 07:00:56.488 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7a55fb81
-2024-09-08 07:00:56.488 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@7272ee51
-2024-09-08 07:00:56.488 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@7272ee51
-2024-09-08 07:00:56.488 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@7272ee51
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@762a10b6
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@762a10b6
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@762a10b6
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@240a2619
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@240a2619
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@240a2619
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3070f3e6
-2024-09-08 07:00:56.489 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3070f3e6
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@3070f3e6
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@4fc6e776
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@4fc6e776
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4fc6e776
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@32da97fd
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@32da97fd
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@32da97fd
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@365cef67
-2024-09-08 07:00:56.490 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@365cef67
-2024-09-08 07:00:56.491 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@b7d2d51
-2024-09-08 07:00:56.491 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@b7d2d51
-2024-09-08 07:00:56.491 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@5d601832
-2024-09-08 07:00:56.491 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@5d601832
-2024-09-08 07:00:56.491 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@c0c8f96
-2024-09-08 07:00:56.492 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@28e94c2
-2024-09-08 07:00:56.492 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@4e4894d
-2024-09-08 07:00:56.492 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@4e4894d
-2024-09-08 07:00:56.492 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@5b332439
-2024-09-08 07:00:56.492 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5b332439
-2024-09-08 07:00:56.493 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@45b7c97f
-2024-09-08 07:00:56.493 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@45b7c97f
-2024-09-08 07:00:56.493 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@4e5c8ef3
-2024-09-08 07:00:56.493 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@4e5c8ef3
-2024-09-08 07:00:56.493 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@6e0d16a4
-2024-09-08 07:00:56.493 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@6e0d16a4
-2024-09-08 07:00:56.494 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@54c11750
-2024-09-08 07:00:56.494 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@54c11750
-2024-09-08 07:00:56.494 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@799c8758
-2024-09-08 07:00:56.494 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@799c8758
-2024-09-08 07:00:56.494 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@582dcd35
-2024-09-08 07:00:56.495 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@582dcd35
-2024-09-08 07:00:56.495 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@638afcaa
-2024-09-08 07:00:56.495 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@638afcaa
-2024-09-08 07:00:56.495 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@11399548
-2024-09-08 07:00:56.495 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@11399548
-2024-09-08 07:00:56.496 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@7871d261
-2024-09-08 07:00:56.496 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@7871d261
-2024-09-08 07:00:56.496 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@4f26425b
-2024-09-08 07:00:56.496 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4f26425b
-2024-09-08 07:00:56.496 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4f26425b
-2024-09-08 07:00:56.497 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@4ebd6fd6
-2024-09-08 07:00:56.497 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@91a2543
-2024-09-08 07:00:56.497 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@91a2543
-2024-09-08 07:00:56.497 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@91a2543
-2024-09-08 07:00:56.497 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@609b041c
-2024-09-08 07:00:56.498 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@2eebce87
-2024-09-08 07:00:56.498 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@7c91fe86
-2024-09-08 07:00:56.498 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@7c91fe86
-2024-09-08 07:00:56.498 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@15994b0b
-2024-09-08 07:00:56.498 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@15994b0b
-2024-09-08 07:00:56.499 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@3407aa4f
-2024-09-08 07:00:56.499 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3407aa4f
-2024-09-08 07:00:56.499 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@748904e8
-2024-09-08 07:00:56.499 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@748904e8
-2024-09-08 07:00:56.499 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4f235e8e
-2024-09-08 07:00:56.499 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4f235e8e
-2024-09-08 07:00:56.499 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@524f5ea5
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@7cd3e0da
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@7cd3e0da
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@7cd3e0da
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5b14f482
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5b14f482
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5b14f482
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@fe8aaeb
-2024-09-08 07:00:56.500 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@a323a5b
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@43e3a390
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@43e3a390
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@43e3a390
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2c579202
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2c579202
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2c579202
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@653a5967
-2024-09-08 07:00:56.501 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@5c4f4330
-2024-09-08 07:00:56.502 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@1a7163e3
-2024-09-08 07:00:56.502 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@1a7163e3
-2024-09-08 07:00:56.502 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2c2e3460
-2024-09-08 07:00:56.502 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@781c2497
-2024-09-08 07:00:56.502 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@781c2497
-2024-09-08 07:00:56.502 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@7a1371
-2024-09-08 07:00:56.502 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@7a1371
-2024-09-08 07:00:56.503 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@239b98cb
-2024-09-08 07:00:56.503 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@36211bbc
-2024-09-08 07:00:56.503 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@77ea806f
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@7ad889be
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7ad889be
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@18907af2
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@658e7ead
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@cfd5cd2
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@762bf32d
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@6d7740f0
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@7b1a30e5
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1de7f898
-2024-09-08 07:00:56.505 DEBUG 21185 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@34fcd292
-2024-09-08 07:00:56.523  INFO 21185 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-08 07:00:56.611  INFO 21185 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-08 07:00:56.627  INFO 21185 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2024-09-08 07:00:56.640 DEBUG 21185 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@69069866] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@ac417a2]
-2024-09-08 07:00:56.741 DEBUG 21185 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@69069866] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@25ea068e]
+2024-12-08 22:18:17.930  INFO 66585 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Starting CartRestControllerTest using Java 17.0.12 on masters-MacBook-Pro.local with PID 66585 (started by master in /Users/master/Desktop/coupon-project/kakaoshop-BE)
+2024-12-08 22:18:17.931 DEBUG 66585 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Running with Spring Boot v2.7.6, Spring v5.3.24
+2024-12-08 22:18:17.931  INFO 66585 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : The following 1 profile is active: "test"
+2024-12-08 22:18:18.254  INFO 66585 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 22:18:18.289  INFO 66585 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 7 JPA repository interfaces.
+2024-12-08 22:18:18.657  INFO 66585 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 22:18:18.678  INFO 66585 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-12-08 22:18:18.753  INFO 66585 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-12-08 22:18:18.765 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@640c216b
+2024-12-08 22:18:18.765 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@640c216b
+2024-12-08 22:18:18.765 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@640c216b
+2024-12-08 22:18:18.765 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@3e52ed5d
+2024-12-08 22:18:18.765 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@14d1737a
+2024-12-08 22:18:18.765 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@1e120628
+2024-12-08 22:18:18.766 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@5b332439
+2024-12-08 22:18:18.766 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@5b332439
+2024-12-08 22:18:18.766 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5b332439
+2024-12-08 22:18:18.766 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@45b7c97f
+2024-12-08 22:18:18.766 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@45b7c97f
+2024-12-08 22:18:18.766 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@45b7c97f
+2024-12-08 22:18:18.766 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@4e5c8ef3
+2024-12-08 22:18:18.767 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@4e5c8ef3
+2024-12-08 22:18:18.767 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@4e5c8ef3
+2024-12-08 22:18:18.767 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@6e0d16a4
+2024-12-08 22:18:18.767 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@6e0d16a4
+2024-12-08 22:18:18.767 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@6e0d16a4
+2024-12-08 22:18:18.767 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@54c11750
+2024-12-08 22:18:18.768 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@54c11750
+2024-12-08 22:18:18.768 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@54c11750
+2024-12-08 22:18:18.768 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@799c8758
+2024-12-08 22:18:18.769 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@799c8758
+2024-12-08 22:18:18.769 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@799c8758
+2024-12-08 22:18:18.769 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@582dcd35
+2024-12-08 22:18:18.769 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@582dcd35
+2024-12-08 22:18:18.769 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@582dcd35
+2024-12-08 22:18:18.770 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@638afcaa
+2024-12-08 22:18:18.770 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@638afcaa
+2024-12-08 22:18:18.770 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@64c25a62
+2024-12-08 22:18:18.770 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@64c25a62
+2024-12-08 22:18:18.770 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@570b2057
+2024-12-08 22:18:18.770 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@570b2057
+2024-12-08 22:18:18.770 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@59f45950
+2024-12-08 22:18:18.771 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@6a7a1a0d
+2024-12-08 22:18:18.771 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@40dd552c
+2024-12-08 22:18:18.771 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@40dd552c
+2024-12-08 22:18:18.771 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@4e50ae56
+2024-12-08 22:18:18.771 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@4e50ae56
+2024-12-08 22:18:18.772 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@3af36922
+2024-12-08 22:18:18.772 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@3af36922
+2024-12-08 22:18:18.772 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@4ce267cc
+2024-12-08 22:18:18.772 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@4ce267cc
+2024-12-08 22:18:18.773 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@74500e4f
+2024-12-08 22:18:18.773 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@74500e4f
+2024-12-08 22:18:18.773 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@54a056e4
+2024-12-08 22:18:18.773 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@54a056e4
+2024-12-08 22:18:18.774 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@78065fcd
+2024-12-08 22:18:18.774 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@78065fcd
+2024-12-08 22:18:18.774 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@22ae905f
+2024-12-08 22:18:18.774 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@22ae905f
+2024-12-08 22:18:18.775 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@72fb989b
+2024-12-08 22:18:18.775 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@72fb989b
+2024-12-08 22:18:18.775 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@4264beb8
+2024-12-08 22:18:18.775 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@4264beb8
+2024-12-08 22:18:18.776 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@4d43a1b7
+2024-12-08 22:18:18.776 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@4d43a1b7
+2024-12-08 22:18:18.776 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@fe8aaeb
+2024-12-08 22:18:18.776 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@fe8aaeb
+2024-12-08 22:18:18.776 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@fe8aaeb
+2024-12-08 22:18:18.777 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@a323a5b
+2024-12-08 22:18:18.778 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@44aa91e2
+2024-12-08 22:18:18.778 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@44aa91e2
+2024-12-08 22:18:18.778 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@44aa91e2
+2024-12-08 22:18:18.778 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@19bfbe28
+2024-12-08 22:18:18.778 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@766b6d02
+2024-12-08 22:18:18.778 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@790ac3e0
+2024-12-08 22:18:18.778 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@790ac3e0
+2024-12-08 22:18:18.779 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@5e69cf07
+2024-12-08 22:18:18.779 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5e69cf07
+2024-12-08 22:18:18.779 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@4e4f4092
+2024-12-08 22:18:18.779 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4e4f4092
+2024-12-08 22:18:18.779 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@70c491b8
+2024-12-08 22:18:18.779 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@70c491b8
+2024-12-08 22:18:18.780 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1b3a9ef4
+2024-12-08 22:18:18.780 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1b3a9ef4
+2024-12-08 22:18:18.780 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@73aaec54
+2024-12-08 22:18:18.780 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@3e151e1f
+2024-12-08 22:18:18.781 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@3e151e1f
+2024-12-08 22:18:18.781 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@3e151e1f
+2024-12-08 22:18:18.781 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@77ea806f
+2024-12-08 22:18:18.781 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@77ea806f
+2024-12-08 22:18:18.781 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@77ea806f
+2024-12-08 22:18:18.782 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@26ca12a2
+2024-12-08 22:18:18.782 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@afee63
+2024-12-08 22:18:18.782 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@5b322873
+2024-12-08 22:18:18.782 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@5b322873
+2024-12-08 22:18:18.782 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@5b322873
+2024-12-08 22:18:18.782 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@658e7ead
+2024-12-08 22:18:18.782 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@658e7ead
+2024-12-08 22:18:18.783 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@658e7ead
+2024-12-08 22:18:18.783 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@7b1a30e5
+2024-12-08 22:18:18.783 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@496cedbb
+2024-12-08 22:18:18.784 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@5ce3409b
+2024-12-08 22:18:18.784 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@5ce3409b
+2024-12-08 22:18:18.784 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@69eb544f
+2024-12-08 22:18:18.785 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@5c5a91b4
+2024-12-08 22:18:18.785 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@5c5a91b4
+2024-12-08 22:18:18.786 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@5be51aa
+2024-12-08 22:18:18.786 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@5be51aa
+2024-12-08 22:18:18.786 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@2c8ff67
+2024-12-08 22:18:18.786 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@21be14c2
+2024-12-08 22:18:18.787 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@61a704d3
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@4adf3582
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@4adf3582
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@577bfadb
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@25ae1f80
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@54f2df29
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@6df791a4
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@655203e3
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@305552d6
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@729cd862
+2024-12-08 22:18:18.788 DEBUG 66585 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@23b71d24
+2024-12-08 22:18:18.809  INFO 66585 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08 22:18:18.915  INFO 66585 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08 22:18:18.930  INFO 66585 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 22:18:18.948 DEBUG 66585 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3b9c9b8b] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@7769d9b6]
+2024-12-08 22:18:19.067 DEBUG 66585 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3b9c9b8b] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@2567c091]
 Hibernate: 
     
     create table cart_tb (
@@ -1430,16 +1430,16 @@ Hibernate:
        add constraint FK9wkv8x8yfgaaquhn4vquq4aps 
        foreign key (user_id) 
        references user_tb
-2024-09-08 07:00:56.907  INFO 21185 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-09-08 07:00:56.911 TRACE 21185 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@25ea068e] for TypeConfiguration
-2024-09-08 07:00:56.911  INFO 21185 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08 07:00:57.634  INFO 21185 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a1dd8eb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4def900a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d7f0cd0, org.springframework.security.web.header.HeaderWriterFilter@77185a2, org.springframework.web.filter.CorsFilter@5e1bfe66, org.springframework.security.web.authentication.logout.LogoutFilter@7e4c0bc7, com.example.kakao._core.security.JwtAuthenticationFilter@6c399d4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5183131d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b3da23f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@726dd367, org.springframework.security.web.session.SessionManagementFilter@47800bd7, org.springframework.security.web.access.ExceptionTranslationFilter@795949fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58267ba1]
-2024-09-08 07:00:57.790  INFO 21185 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
-2024-09-08 07:00:57.989  INFO 21185 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-09-08 07:00:57.990  INFO 21185 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-09-08 07:00:57.990  INFO 21185 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2024-09-08 07:00:58.001  INFO 21185 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Started CartRestControllerTest in 2.399 seconds (JVM running for 2.916)
-2024-09-08 07:00:58.024  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@4ecc4b43]
+2024-12-08 22:18:19.465  INFO 66585 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 22:18:19.469 TRACE 66585 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@2567c091] for TypeConfiguration
+2024-12-08 22:18:19.469  INFO 66585 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 22:18:20.322  INFO 66585 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b867869, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b6b8cea, org.springframework.security.web.context.SecurityContextPersistenceFilter@487bc2fe, org.springframework.security.web.header.HeaderWriterFilter@49994a4, org.springframework.web.filter.CorsFilter@73158d35, org.springframework.security.web.authentication.logout.LogoutFilter@4cf1bd4a, com.example.kakao._core.security.JwtAuthenticationFilter@55a29589, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e733bb5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@669e730d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d5fea64, org.springframework.security.web.session.SessionManagementFilter@5ff8d76f, org.springframework.security.web.access.ExceptionTranslationFilter@188532da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@321558f8]
+2024-12-08 22:18:20.509  INFO 66585 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
+2024-12-08 22:18:20.792  INFO 66585 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-08 22:18:20.792  INFO 66585 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-08 22:18:20.793  INFO 66585 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-12-08 22:18:20.806  INFO 66585 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Started CartRestControllerTest in 3.024 seconds (JVM running for 3.693)
+2024-12-08 22:18:20.837  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@301b89e1]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -1544,7 +1544,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.095  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@54632794]
+2024-12-08 22:18:20.913  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@611f28f5]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -1649,7 +1649,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.101  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@760f4310]
+2024-12-08 22:18:20.920  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@4290fcd7]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -1754,7 +1754,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.110  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@77eb76f]
+2024-12-08 22:18:20.931  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@6f78c132]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -1859,7 +1859,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.116  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@1efa258e]
+2024-12-08 22:18:20.946  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@6ba19932]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -1964,7 +1964,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.125  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAllNotAuthorization_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@1ae69abe]
+2024-12-08 22:18:20.965  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAllNotAuthorization_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@79de00af]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -2069,7 +2069,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.133  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_cart_404_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@d319d2c]
+2024-12-08 22:18:20.985  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_cart_404_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@ef1080d]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -2174,7 +2174,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.143  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@5add0cc0]
+2024-12-08 22:18:21.008  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@367e0b0e]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -2279,7 +2279,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.155  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@611f28f5]
+2024-12-08 22:18:21.092  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@268ee31d]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -2384,7 +2384,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.160  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@4290fcd7]
+2024-12-08 22:18:21.107  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@44872224]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
@@ -2489,7 +2489,7 @@ use `coupon` [90079-214]
 	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-09-08 07:00:58.166  WARN 21185 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ebff828] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAll_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@6f78c132]
+2024-12-08 22:18:21.117  WARN 66585 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2cab9998] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAll_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@23ba2c1e]
 
 org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
 use `coupon` [90079-214]
