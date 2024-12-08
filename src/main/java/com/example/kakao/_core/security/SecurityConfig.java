@@ -68,9 +68,11 @@ public class SecurityConfig {
             FilterResponseUtils.forbidden(response, new Exception403("권한이 없습니다"));
         });
 
-        // 11. 인증, 권한 필터 설정
+        // 10. 인증, 권한 필터 설정
         http.authorizeRequests(
-                authorize -> authorize.antMatchers("/carts/**", "/options/**", "/orders/**", "/users/**").authenticated()
+                authorize -> authorize
+                        .antMatchers("/images/**").permitAll() // 정적 리소스 허용
+                        .antMatchers("/carts/**", "/options/**", "/orders/**", "/users/**").authenticated()
                         .antMatchers("/admin/**")
                         .access("hasRole('ADMIN')")
                         .anyRequest().permitAll()
