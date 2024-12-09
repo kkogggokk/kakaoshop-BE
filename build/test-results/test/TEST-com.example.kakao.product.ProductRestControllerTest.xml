@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.kakao.product.ProductRestControllerTest" tests="3" skipped="0" failures="3" errors="0" timestamp="2024-12-08T15:32:07" hostname="masters-MacBook-Pro.local" time="0.014">
+<testsuite name="com.example.kakao.product.ProductRestControllerTest" tests="3" skipped="0" failures="3" errors="0" timestamp="2024-12-09T14:26:49" hostname="masters-MacBook-Pro.local" time="0.018">
   <properties/>
   <testcase name="findById_test()" classname="com.example.kakao.product.ProductRestControllerTest" time="0.004">
-    <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+    <failure message="org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist" type="org.springframework.jdbc.datasource.init.CannotReadScriptException">org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -88,28 +87,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="findById_fail_test()" classname="com.example.kakao.product.ProductRestControllerTest" time="0.004">
-    <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+  <testcase name="findById_fail_test()" classname="com.example.kakao.product.ProductRestControllerTest" time="0.008">
+    <failure message="org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist" type="org.springframework.jdbc.datasource.init.CannotReadScriptException">org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -193,28 +181,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </failure>
   </testcase>
-  <testcase name="findAll_test()" classname="com.example.kakao.product.ProductRestControllerTest" time="0.005">
-    <failure message="org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:&#10;use `coupon` [90079-214]" type="org.springframework.jdbc.datasource.init.ScriptStatementFailedException">org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+  <testcase name="findAll_test()" classname="com.example.kakao.product.ProductRestControllerTest" time="0.004">
+    <failure message="org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist" type="org.springframework.jdbc.datasource.init.CannotReadScriptException">org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -298,35 +275,24 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </failure>
   </testcase>
-  <system-out><![CDATA[2024-12-09 00:32:07.072  INFO 88255 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.product.ProductRestControllerTest], using SpringBootContextLoader
-2024-12-09 00:32:07.072  INFO 88255 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.kakao.product.ProductRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-12-09 00:32:07.072  INFO 88255 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.kakao.product.ProductRestControllerTest]: ProductRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-12-09 00:32:07.075  INFO 88255 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.product.ProductRestControllerTest
-2024-12-09 00:32:07.076  INFO 88255 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-12-09 00:32:07.076  INFO 88255 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6223dbed, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5713e35f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1f40bb80, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@c42ee90, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70c2a046, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3803bc1a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@22858c21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@39a8c08f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5c0d876c, org.springframework.test.context.event.EventPublishingTestExecutionListener@794b139b, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@77217c17, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@87276c4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@38f4a641, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1902ad0f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@653fbbfc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7e6025c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@63bb52ea]
-2024-12-09 00:32:07.080  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@39a8c08f] for test method [public void com.example.kakao.product.ProductRestControllerTest.findById_test() throws java.lang.Exception] and test instance [com.example.kakao.product.ProductRestControllerTest@6f5df147]
+  <system-out><![CDATA[2024-12-09 23:26:49.152  INFO 17039 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.product.ProductRestControllerTest], using SpringBootContextLoader
+2024-12-09 23:26:49.152  INFO 17039 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.kakao.product.ProductRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-12-09 23:26:49.152  INFO 17039 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.kakao.product.ProductRestControllerTest]: ProductRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-09 23:26:49.159  INFO 17039 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.product.ProductRestControllerTest
+2024-12-09 23:26:49.160  INFO 17039 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-12-09 23:26:49.160  INFO 17039 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78626209, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7b9b244e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@996126b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6d2413e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6d4b09c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f50e974, org.springframework.test.context.transaction.TransactionalTestExecutionListener@76ecbfbf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6223dbed, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5713e35f, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f40bb80, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@c42ee90, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@70c2a046, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3803bc1a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@22858c21, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@39a8c08f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5c0d876c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@794b139b]
+2024-12-09 23:26:49.167  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6223dbed] for test method [public void com.example.kakao.product.ProductRestControllerTest.findById_test() throws java.lang.Exception] and test instance [com.example.kakao.product.ProductRestControllerTest@77217c17]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -410,28 +376,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:07.085  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@39a8c08f] for test method [void com.example.kakao.product.ProductRestControllerTest.findById_fail_test() throws java.lang.Exception] and test instance [com.example.kakao.product.ProductRestControllerTest@318155b1]
+2024-12-09 23:26:49.172  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6223dbed] for test method [void com.example.kakao.product.ProductRestControllerTest.findById_fail_test() throws java.lang.Exception] and test instance [com.example.kakao.product.ProductRestControllerTest@1902ad0f]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -515,28 +470,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:07.090  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@39a8c08f] for test method [public void com.example.kakao.product.ProductRestControllerTest.findAll_test() throws java.lang.Exception] and test instance [com.example.kakao.product.ProductRestControllerTest@47fb30ca]
+2024-12-09 23:26:49.180  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6223dbed] for test method [public void com.example.kakao.product.ProductRestControllerTest.findAll_test() throws java.lang.Exception] and test instance [com.example.kakao.product.ProductRestControllerTest@63bb52ea]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -620,21 +564,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "COUPON" not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
 ]]></system-out>

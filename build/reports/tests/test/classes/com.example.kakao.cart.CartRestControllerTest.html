@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.159s</div>
+<div class="counter">0.128s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,9 +76,8 @@
 <a name="addCartList_fail400_test()"></a>
 <h3 class="failures">addCartList_fail400_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -162,21 +161,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -185,9 +174,8 @@ use `coupon` [90079-214]
 <a name="addCartList_fail_duplicated_options_test()"></a>
 <h3 class="failures">addCartList_fail_duplicated_options_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -271,21 +259,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -294,9 +272,8 @@ use `coupon` [90079-214]
 <a name="addCartList_fail_not_found_option_test()"></a>
 <h3 class="failures">addCartList_fail_not_found_option_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -380,21 +357,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -403,9 +370,8 @@ use `coupon` [90079-214]
 <a name="addCartList_test()"></a>
 <h3 class="failures">addCartList_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -489,21 +455,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -512,9 +468,8 @@ use `coupon` [90079-214]
 <a name="findAllNotAuthorization_test()"></a>
 <h3 class="failures">findAllNotAuthorization_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -598,21 +553,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -621,9 +566,8 @@ use `coupon` [90079-214]
 <a name="findAll_test()"></a>
 <h3 class="failures">findAll_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -707,21 +651,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -730,9 +664,8 @@ use `coupon` [90079-214]
 <a name="update_cart_404_test()"></a>
 <h3 class="failures">update_cart_404_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -816,21 +749,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -839,9 +762,8 @@ use `coupon` [90079-214]
 <a name="update_duplicated_options_test()"></a>
 <h3 class="failures">update_duplicated_options_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -925,21 +847,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -948,9 +860,8 @@ use `coupon` [90079-214]
 <a name="update_fail400_test()"></a>
 <h3 class="failures">update_fail400_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -1034,21 +945,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -1057,9 +958,8 @@ use `coupon` [90079-214]
 <a name="update_not_found_option_test()"></a>
 <h3 class="failures">update_not_found_option_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -1143,21 +1043,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -1166,9 +1056,8 @@ use `coupon` [90079-214]
 <a name="update_test()"></a>
 <h3 class="failures">update_test()</h3>
 <span class="code">
-<pre>org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+<pre>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
 	at app//org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
 	at app//org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)
@@ -1252,21 +1141,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
-	at app//org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	at app//org.h2.message.DbException.get(DbException.java:223)
-	at app//org.h2.message.DbException.get(DbException.java:199)
-	at app//org.h2.engine.Database.getSchema(Database.java:1546)
-	at app//org.h2.command.dml.Set.update(Set.java:397)
-	at app//org.h2.command.CommandContainer.update(CommandContainer.java:169)
-	at app//org.h2.command.Command.executeUpdate(Command.java:252)
-	at app//org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
-	at app//org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
-	at app//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at app//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at app//org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)
 	... 83 more
 </pre>
 </span>
@@ -1284,57 +1163,57 @@ use `coupon` [90079-214]
 </thead>
 <tr>
 <td class="failures">addCartList_fail400_test()</td>
-<td class="failures">0.007s</td>
+<td class="failures">0.008s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">addCartList_fail_duplicated_options_test()</td>
-<td class="failures">0.008s</td>
+<td class="failures">0.004s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">addCartList_fail_not_found_option_test()</td>
-<td class="failures">0.089s</td>
+<td class="failures">0.083s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">addCartList_test()</td>
-<td class="failures">0.006s</td>
+<td class="failures">0.004s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">findAllNotAuthorization_test()</td>
-<td class="failures">0.007s</td>
+<td class="failures">0.004s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">findAll_test()</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.003s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">update_cart_404_test()</td>
-<td class="failures">0.006s</td>
+<td class="failures">0.004s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">update_duplicated_options_test()</td>
-<td class="failures">0.010s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="failures">update_fail400_test()</td>
-<td class="failures">0.008s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="failures">update_not_found_option_test()</td>
 <td class="failures">0.007s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
+<td class="failures">update_fail400_test()</td>
+<td class="failures">0.004s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">update_not_found_option_test()</td>
+<td class="failures">0.004s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
 <td class="failures">update_test()</td>
-<td class="failures">0.006s</td>
+<td class="failures">0.003s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -1342,20 +1221,20 @@ use `coupon` [90079-214]
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>00:32:04.203 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-00:32:04.207 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-00:32:04.224 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.kakao.cart.CartRestControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-00:32:04.227 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.cart.CartRestControllerTest], using SpringBootContextLoader
-00:32:04.229 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTest-context.xml] does not exist
-00:32:04.229 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTestContext.groovy] does not exist
-00:32:04.229 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.kakao.cart.CartRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-00:32:04.229 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.kakao.cart.CartRestControllerTest]: CartRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-00:32:04.296 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/master/Desktop/coupon-project/kakaoshop-BE/build/classes/java/main/com/example/kakao/KakaoApplication.class]
-00:32:04.297 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.cart.CartRestControllerTest
-00:32:04.335 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.kakao.cart.CartRestControllerTest]: using defaults.
-00:32:04.336 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-00:32:04.346 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@62679465, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a988392, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1d71006f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5b6813df, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5f2606b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b58f754, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3ebff828, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@33352f32, org.springframework.test.context.event.EventPublishingTestExecutionListener@5f3b9c57, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1e044120, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2cf23c81, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3624da92, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35fe2125, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@94f6bfb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@34645867, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2484f433]
-00:32:04.348 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@37f21974 testClass = CartRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5f4d427e testClass = CartRestControllerTest, locations = '{}', classes = '{class com.example.kakao.KakaoApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@39655d3e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@63da64fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@21a21c64, [ImportsContextCustomizer@6e521c1e key = [@org.springframework.test.context.ActiveProfiles(profiles={}, resolver=org.springframework.test.context.ActiveProfilesResolver.class, value={&quot;test&quot;}, inheritProfiles=true), @org.springframework.test.context.jdbc.Sql(executionPhase=BEFORE_TEST_METHOD, statements={}, scripts={}, value={&quot;classpath:db/teardown.sql&quot;}, config=@org.springframework.test.context.jdbc.SqlConfig(blockCommentStartDelimiter=&quot;&quot;, commentPrefix=&quot;&quot;, transactionMode=DEFAULT, blockCommentEndDelimiter=&quot;&quot;, commentPrefixes={}, transactionManager=&quot;&quot;, errorMode=DEFAULT, encoding=&quot;&quot;, separator=&quot;&quot;, dataSource=&quot;&quot;)), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=&quot;spring.test.mockmvc&quot;, skip=NO), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value={}, exclude={}, classes={}), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, printOnlyOnFailure=true, addFilters=true), @org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs(uriScheme=&quot;http&quot;, outputDir=&quot;&quot;, uriPort=80, value=&quot;&quot;, uriHost=&quot;localhost&quot;), @org.springframework.context.annotation.Import({org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.class}), @org.springframework.boot.test.context.SpringBootTest(args={}, webEnvironment=MOCK, value={}, properties={}, classes={}), @org.springframework.context.annotation.Import({org.springframework.boot.test.autoconfigure.restdocs.RestDocumentationContextProviderRegistrar.class}), @org.springframework.test.context.BootstrapWith(org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=&quot;spring.test.restdocs&quot;, skip=NO)]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6aa3a905, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@324a0017, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@45fd9a4d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@247d8ae], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>23:26:45.859 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+23:26:45.864 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+23:26:45.881 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.kakao.cart.CartRestControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+23:26:45.885 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.kakao.cart.CartRestControllerTest], using SpringBootContextLoader
+23:26:45.887 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTest-context.xml] does not exist
+23:26:45.887 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.kakao.cart.CartRestControllerTest]: class path resource [com/example/kakao/cart/CartRestControllerTestContext.groovy] does not exist
+23:26:45.887 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.kakao.cart.CartRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+23:26:45.887 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.kakao.cart.CartRestControllerTest]: CartRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:26:45.956 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/master/Desktop/coupon-project/kakaoshop-BE/build/classes/java/main/com/example/kakao/KakaoApplication.class]
+23:26:45.957 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.kakao.KakaoApplication for test class com.example.kakao.cart.CartRestControllerTest
+23:26:45.990 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.kakao.cart.CartRestControllerTest]: using defaults.
+23:26:45.990 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+23:26:46.000 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@62679465, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a988392, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1d71006f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5b6813df, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5f2606b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b58f754, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3ebff828, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@33352f32, org.springframework.test.context.event.EventPublishingTestExecutionListener@5f3b9c57, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1e044120, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2cf23c81, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3624da92, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35fe2125, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@94f6bfb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@34645867, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2484f433]
+23:26:46.002 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@37f21974 testClass = CartRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5f4d427e testClass = CartRestControllerTest, locations = '{}', classes = '{class com.example.kakao.KakaoApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@39655d3e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@63da64fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@21a21c64, [ImportsContextCustomizer@6e521c1e key = [@org.springframework.test.context.ActiveProfiles(profiles={}, resolver=org.springframework.test.context.ActiveProfilesResolver.class, value={&quot;test&quot;}, inheritProfiles=true), @org.springframework.test.context.jdbc.Sql(executionPhase=BEFORE_TEST_METHOD, statements={}, scripts={}, value={&quot;classpath:db/teardown.sql&quot;}, config=@org.springframework.test.context.jdbc.SqlConfig(blockCommentStartDelimiter=&quot;&quot;, commentPrefix=&quot;&quot;, blockCommentEndDelimiter=&quot;&quot;, transactionMode=DEFAULT, commentPrefixes={}, errorMode=DEFAULT, transactionManager=&quot;&quot;, encoding=&quot;&quot;, separator=&quot;&quot;, dataSource=&quot;&quot;)), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=&quot;spring.test.mockmvc&quot;, skip=NO), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value={}, exclude={}, classes={}), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs(uriScheme=&quot;http&quot;, outputDir=&quot;&quot;, uriPort=80, value=&quot;&quot;, uriHost=&quot;localhost&quot;), @org.springframework.context.annotation.Import({org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.class}), @org.springframework.boot.test.context.SpringBootTest(args={}, webEnvironment=MOCK, value={}, properties={}, classes={}), @org.springframework.context.annotation.Import({org.springframework.boot.test.autoconfigure.restdocs.RestDocumentationContextProviderRegistrar.class}), @org.springframework.test.context.BootstrapWith(org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value=&quot;spring.test.restdocs&quot;, skip=NO)]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6aa3a905, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@324a0017, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@45fd9a4d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@247d8ae], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -1365,132 +1244,132 @@ use `coupon` [90079-214]
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.6)
 
-2024-12-09 00:32:04.504  INFO 88255 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Starting CartRestControllerTest using Java 17.0.12 on masters-MacBook-Pro.local with PID 88255 (started by master in /Users/master/Desktop/coupon-project/kakaoshop-BE)
-2024-12-09 00:32:04.504 DEBUG 88255 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Running with Spring Boot v2.7.6, Spring v5.3.24
-2024-12-09 00:32:04.505  INFO 88255 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : The following 1 profile is active: &quot;test&quot;
-2024-12-09 00:32:04.797  INFO 88255 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-09 00:32:04.830  INFO 88255 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 7 JPA repository interfaces.
-2024-12-09 00:32:05.147  INFO 88255 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-09 00:32:05.170  INFO 88255 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-12-09 00:32:05.240  INFO 88255 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-12-09 00:32:05.250 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -&gt; org.hibernate.type.BooleanType@684372d0
-2024-12-09 00:32:05.251 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -&gt; org.hibernate.type.BooleanType@684372d0
-2024-12-09 00:32:05.251 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -&gt; org.hibernate.type.BooleanType@684372d0
-2024-12-09 00:32:05.251 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -&gt; org.hibernate.type.NumericBooleanType@7574d4ad
-2024-12-09 00:32:05.251 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -&gt; org.hibernate.type.TrueFalseType@33627576
-2024-12-09 00:32:05.251 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -&gt; org.hibernate.type.YesNoType@5a3cf878
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -&gt; org.hibernate.type.ByteType@5940b14e
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -&gt; org.hibernate.type.ByteType@5940b14e
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -&gt; org.hibernate.type.ByteType@5940b14e
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -&gt; org.hibernate.type.CharacterType@f2fb225
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -&gt; org.hibernate.type.CharacterType@f2fb225
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -&gt; org.hibernate.type.CharacterType@f2fb225
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -&gt; org.hibernate.type.ShortType@539316bb
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -&gt; org.hibernate.type.ShortType@539316bb
-2024-12-09 00:32:05.252 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -&gt; org.hibernate.type.ShortType@539316bb
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -&gt; org.hibernate.type.IntegerType@52bba91a
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -&gt; org.hibernate.type.IntegerType@52bba91a
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -&gt; org.hibernate.type.IntegerType@52bba91a
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -&gt; org.hibernate.type.LongType@1f7e52d1
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -&gt; org.hibernate.type.LongType@1f7e52d1
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -&gt; org.hibernate.type.LongType@1f7e52d1
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -&gt; org.hibernate.type.FloatType@4aa22cc2
-2024-12-09 00:32:05.253 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -&gt; org.hibernate.type.FloatType@4aa22cc2
-2024-12-09 00:32:05.254 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -&gt; org.hibernate.type.FloatType@4aa22cc2
-2024-12-09 00:32:05.254 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -&gt; org.hibernate.type.DoubleType@69bc9584
-2024-12-09 00:32:05.254 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -&gt; org.hibernate.type.DoubleType@69bc9584
-2024-12-09 00:32:05.254 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -&gt; org.hibernate.type.DoubleType@69bc9584
-2024-12-09 00:32:05.254 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -&gt; org.hibernate.type.BigDecimalType@45984654
-2024-12-09 00:32:05.254 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -&gt; org.hibernate.type.BigDecimalType@45984654
-2024-12-09 00:32:05.255 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -&gt; org.hibernate.type.BigIntegerType@640c216b
-2024-12-09 00:32:05.255 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -&gt; org.hibernate.type.BigIntegerType@640c216b
-2024-12-09 00:32:05.255 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -&gt; org.hibernate.type.StringType@3d40498a
-2024-12-09 00:32:05.255 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -&gt; org.hibernate.type.StringType@3d40498a
-2024-12-09 00:32:05.255 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -&gt; org.hibernate.type.StringNVarcharType@147efd9
-2024-12-09 00:32:05.255 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -&gt; org.hibernate.type.CharacterNCharType@23e2c1ca
-2024-12-09 00:32:05.256 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -&gt; org.hibernate.type.UrlType@78479f2b
-2024-12-09 00:32:05.256 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -&gt; org.hibernate.type.UrlType@78479f2b
-2024-12-09 00:32:05.256 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -&gt; org.hibernate.type.DurationType@7b377a53
-2024-12-09 00:32:05.256 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -&gt; org.hibernate.type.DurationType@7b377a53
-2024-12-09 00:32:05.256 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -&gt; org.hibernate.type.InstantType@27358a19
-2024-12-09 00:32:05.256 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -&gt; org.hibernate.type.InstantType@27358a19
-2024-12-09 00:32:05.257 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -&gt; org.hibernate.type.LocalDateTimeType@305b43ca
-2024-12-09 00:32:05.257 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -&gt; org.hibernate.type.LocalDateTimeType@305b43ca
-2024-12-09 00:32:05.257 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -&gt; org.hibernate.type.LocalDateType@5cd8d029
-2024-12-09 00:32:05.257 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -&gt; org.hibernate.type.LocalDateType@5cd8d029
-2024-12-09 00:32:05.257 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -&gt; org.hibernate.type.LocalTimeType@63e4484d
-2024-12-09 00:32:05.257 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -&gt; org.hibernate.type.LocalTimeType@63e4484d
-2024-12-09 00:32:05.258 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -&gt; org.hibernate.type.OffsetDateTimeType@394a6d2b
-2024-12-09 00:32:05.258 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -&gt; org.hibernate.type.OffsetDateTimeType@394a6d2b
-2024-12-09 00:32:05.258 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -&gt; org.hibernate.type.OffsetTimeType@62735b13
-2024-12-09 00:32:05.258 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -&gt; org.hibernate.type.OffsetTimeType@62735b13
-2024-12-09 00:32:05.258 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -&gt; org.hibernate.type.ZonedDateTimeType@66a82a13
-2024-12-09 00:32:05.258 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -&gt; org.hibernate.type.ZonedDateTimeType@66a82a13
-2024-12-09 00:32:05.259 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -&gt; org.hibernate.type.DateType@58164e9a
-2024-12-09 00:32:05.259 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -&gt; org.hibernate.type.DateType@58164e9a
-2024-12-09 00:32:05.259 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -&gt; org.hibernate.type.TimeType@f03ee8f
-2024-12-09 00:32:05.259 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -&gt; org.hibernate.type.TimeType@f03ee8f
-2024-12-09 00:32:05.260 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -&gt; org.hibernate.type.TimestampType@4e50ae56
-2024-12-09 00:32:05.260 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -&gt; org.hibernate.type.TimestampType@4e50ae56
-2024-12-09 00:32:05.260 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -&gt; org.hibernate.type.TimestampType@4e50ae56
-2024-12-09 00:32:05.260 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -&gt; org.hibernate.type.DbTimestampType@42730828
-2024-12-09 00:32:05.261 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -&gt; org.hibernate.type.CalendarType@6734ff92
-2024-12-09 00:32:05.261 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -&gt; org.hibernate.type.CalendarType@6734ff92
-2024-12-09 00:32:05.261 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -&gt; org.hibernate.type.CalendarType@6734ff92
-2024-12-09 00:32:05.261 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -&gt; org.hibernate.type.CalendarDateType@6775c0d1
-2024-12-09 00:32:05.261 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -&gt; org.hibernate.type.CalendarTimeType@13d289c7
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -&gt; org.hibernate.type.LocaleType@1a717d79
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -&gt; org.hibernate.type.LocaleType@1a717d79
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -&gt; org.hibernate.type.CurrencyType@538b3c88
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -&gt; org.hibernate.type.CurrencyType@538b3c88
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -&gt; org.hibernate.type.TimeZoneType@3b3056a6
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -&gt; org.hibernate.type.TimeZoneType@3b3056a6
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -&gt; org.hibernate.type.ClassType@29dcdd1c
-2024-12-09 00:32:05.262 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -&gt; org.hibernate.type.ClassType@29dcdd1c
-2024-12-09 00:32:05.263 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -&gt; org.hibernate.type.UUIDBinaryType@4ff66917
-2024-12-09 00:32:05.263 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -&gt; org.hibernate.type.UUIDBinaryType@4ff66917
-2024-12-09 00:32:05.263 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -&gt; org.hibernate.type.UUIDCharType@919086
-2024-12-09 00:32:05.263 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -&gt; org.hibernate.type.BinaryType@1a785fd5
-2024-12-09 00:32:05.263 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -&gt; org.hibernate.type.BinaryType@1a785fd5
-2024-12-09 00:32:05.263 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -&gt; org.hibernate.type.BinaryType@1a785fd5
-2024-12-09 00:32:05.263 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -&gt; org.hibernate.type.WrapperBinaryType@5cf0673d
-2024-12-09 00:32:05.264 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -&gt; org.hibernate.type.WrapperBinaryType@5cf0673d
-2024-12-09 00:32:05.264 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -&gt; org.hibernate.type.WrapperBinaryType@5cf0673d
-2024-12-09 00:32:05.264 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -&gt; org.hibernate.type.RowVersionType@8f39224
-2024-12-09 00:32:05.264 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -&gt; org.hibernate.type.ImageType@50dc49e1
-2024-12-09 00:32:05.264 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -&gt; org.hibernate.type.CharArrayType@11c7a0b4
-2024-12-09 00:32:05.264 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -&gt; org.hibernate.type.CharArrayType@11c7a0b4
-2024-12-09 00:32:05.264 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -&gt; org.hibernate.type.CharArrayType@11c7a0b4
-2024-12-09 00:32:05.265 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -&gt; org.hibernate.type.CharacterArrayType@2b9aeedb
-2024-12-09 00:32:05.265 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -&gt; org.hibernate.type.CharacterArrayType@2b9aeedb
-2024-12-09 00:32:05.265 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -&gt; org.hibernate.type.CharacterArrayType@2b9aeedb
-2024-12-09 00:32:05.265 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -&gt; org.hibernate.type.TextType@790ac3e0
-2024-12-09 00:32:05.265 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -&gt; org.hibernate.type.NTextType@56d6a1b1
-2024-12-09 00:32:05.265 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -&gt; org.hibernate.type.BlobType@4e4f4092
-2024-12-09 00:32:05.265 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -&gt; org.hibernate.type.BlobType@4e4f4092
-2024-12-09 00:32:05.266 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -&gt; org.hibernate.type.MaterializedBlobType@3120495d
-2024-12-09 00:32:05.266 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -&gt; org.hibernate.type.ClobType@1b3a9ef4
-2024-12-09 00:32:05.266 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -&gt; org.hibernate.type.ClobType@1b3a9ef4
-2024-12-09 00:32:05.266 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -&gt; org.hibernate.type.NClobType@7ef41ca2
-2024-12-09 00:32:05.266 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -&gt; org.hibernate.type.NClobType@7ef41ca2
-2024-12-09 00:32:05.266 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -&gt; org.hibernate.type.MaterializedClobType@5e98032e
-2024-12-09 00:32:05.267 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -&gt; org.hibernate.type.MaterializedNClobType@7f1f60a0
-2024-12-09 00:32:05.267 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -&gt; org.hibernate.type.SerializableType@60dcf9ec
-2024-12-09 00:32:05.268 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -&gt; org.hibernate.type.ObjectType@7b1a30e5
-2024-12-09 00:32:05.268 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -&gt; org.hibernate.type.ObjectType@7b1a30e5
-2024-12-09 00:32:05.268 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -&gt; org.hibernate.type.AdaptedImmutableType@496cedbb
-2024-12-09 00:32:05.269 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -&gt; org.hibernate.type.AdaptedImmutableType@6b6def36
-2024-12-09 00:32:05.269 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -&gt; org.hibernate.type.AdaptedImmutableType@3957d88b
-2024-12-09 00:32:05.269 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -&gt; org.hibernate.type.AdaptedImmutableType@1152900
-2024-12-09 00:32:05.269 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -&gt; org.hibernate.type.AdaptedImmutableType@2fba0dac
-2024-12-09 00:32:05.269 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -&gt; org.hibernate.type.AdaptedImmutableType@2b2a4332
-2024-12-09 00:32:05.269 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -&gt; org.hibernate.type.AdaptedImmutableType@2cbe455c
-2024-12-09 00:32:05.269 DEBUG 88255 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -&gt; org.hibernate.type.AdaptedImmutableType@4cb24e2
-2024-12-09 00:32:05.286  INFO 88255 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-09 00:32:05.369  INFO 88255 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-09 00:32:05.390  INFO 88255 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2024-12-09 00:32:05.407 DEBUG 88255 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@246de37e] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@19647566]
-2024-12-09 00:32:05.517 DEBUG 88255 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@246de37e] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@236a4d30]
+2024-12-09 23:26:46.158  INFO 17039 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Starting CartRestControllerTest using Java 17.0.12 on masters-MacBook-Pro.local with PID 17039 (started by master in /Users/master/Desktop/coupon-project/kakaoshop-BE)
+2024-12-09 23:26:46.158 DEBUG 17039 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Running with Spring Boot v2.7.6, Spring v5.3.24
+2024-12-09 23:26:46.158  INFO 17039 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : The following 1 profile is active: &quot;test&quot;
+2024-12-09 23:26:46.474  INFO 17039 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:26:46.505  INFO 17039 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 7 JPA repository interfaces.
+2024-12-09 23:26:46.820  INFO 17039 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:26:46.847  INFO 17039 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-12-09 23:26:46.922  INFO 17039 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-12-09 23:26:46.934 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -&gt; org.hibernate.type.BooleanType@5873f3f0
+2024-12-09 23:26:46.934 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -&gt; org.hibernate.type.BooleanType@5873f3f0
+2024-12-09 23:26:46.934 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -&gt; org.hibernate.type.BooleanType@5873f3f0
+2024-12-09 23:26:46.934 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -&gt; org.hibernate.type.NumericBooleanType@652e345
+2024-12-09 23:26:46.934 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -&gt; org.hibernate.type.TrueFalseType@6060146b
+2024-12-09 23:26:46.934 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -&gt; org.hibernate.type.YesNoType@7a55fb81
+2024-12-09 23:26:46.935 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -&gt; org.hibernate.type.ByteType@1b409a79
+2024-12-09 23:26:46.935 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -&gt; org.hibernate.type.ByteType@1b409a79
+2024-12-09 23:26:46.935 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -&gt; org.hibernate.type.ByteType@1b409a79
+2024-12-09 23:26:46.935 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -&gt; org.hibernate.type.CharacterType@74431b9c
+2024-12-09 23:26:46.935 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -&gt; org.hibernate.type.CharacterType@74431b9c
+2024-12-09 23:26:46.935 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -&gt; org.hibernate.type.CharacterType@74431b9c
+2024-12-09 23:26:46.936 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -&gt; org.hibernate.type.ShortType@4e3283f6
+2024-12-09 23:26:46.936 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -&gt; org.hibernate.type.ShortType@4e3283f6
+2024-12-09 23:26:46.936 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -&gt; org.hibernate.type.ShortType@4e3283f6
+2024-12-09 23:26:46.936 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -&gt; org.hibernate.type.IntegerType@3271ec2a
+2024-12-09 23:26:46.936 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -&gt; org.hibernate.type.IntegerType@3271ec2a
+2024-12-09 23:26:46.936 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -&gt; org.hibernate.type.IntegerType@3271ec2a
+2024-12-09 23:26:46.937 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -&gt; org.hibernate.type.LongType@65d9e72a
+2024-12-09 23:26:46.937 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -&gt; org.hibernate.type.LongType@65d9e72a
+2024-12-09 23:26:46.937 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -&gt; org.hibernate.type.LongType@65d9e72a
+2024-12-09 23:26:46.938 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -&gt; org.hibernate.type.FloatType@64440065
+2024-12-09 23:26:46.938 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -&gt; org.hibernate.type.FloatType@64440065
+2024-12-09 23:26:46.938 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -&gt; org.hibernate.type.FloatType@64440065
+2024-12-09 23:26:46.938 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -&gt; org.hibernate.type.DoubleType@27df5806
+2024-12-09 23:26:46.938 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -&gt; org.hibernate.type.DoubleType@27df5806
+2024-12-09 23:26:46.938 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -&gt; org.hibernate.type.DoubleType@27df5806
+2024-12-09 23:26:46.939 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -&gt; org.hibernate.type.BigDecimalType@641ed324
+2024-12-09 23:26:46.939 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -&gt; org.hibernate.type.BigDecimalType@641ed324
+2024-12-09 23:26:46.939 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -&gt; org.hibernate.type.BigIntegerType@3ca17943
+2024-12-09 23:26:46.939 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -&gt; org.hibernate.type.BigIntegerType@3ca17943
+2024-12-09 23:26:46.940 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -&gt; org.hibernate.type.StringType@28e94c2
+2024-12-09 23:26:46.940 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -&gt; org.hibernate.type.StringType@28e94c2
+2024-12-09 23:26:46.940 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -&gt; org.hibernate.type.StringNVarcharType@3e74fd84
+2024-12-09 23:26:46.940 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -&gt; org.hibernate.type.CharacterNCharType@1de5cc88
+2024-12-09 23:26:46.941 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -&gt; org.hibernate.type.UrlType@59262a90
+2024-12-09 23:26:46.941 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -&gt; org.hibernate.type.UrlType@59262a90
+2024-12-09 23:26:46.941 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -&gt; org.hibernate.type.DurationType@c212536
+2024-12-09 23:26:46.941 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -&gt; org.hibernate.type.DurationType@c212536
+2024-12-09 23:26:46.941 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -&gt; org.hibernate.type.InstantType@60928a61
+2024-12-09 23:26:46.941 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -&gt; org.hibernate.type.InstantType@60928a61
+2024-12-09 23:26:46.942 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -&gt; org.hibernate.type.LocalDateTimeType@7e18ced7
+2024-12-09 23:26:46.942 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -&gt; org.hibernate.type.LocalDateTimeType@7e18ced7
+2024-12-09 23:26:46.942 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -&gt; org.hibernate.type.LocalDateType@221b77d7
+2024-12-09 23:26:46.942 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -&gt; org.hibernate.type.LocalDateType@221b77d7
+2024-12-09 23:26:46.942 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -&gt; org.hibernate.type.LocalTimeType@6e00837f
+2024-12-09 23:26:46.942 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -&gt; org.hibernate.type.LocalTimeType@6e00837f
+2024-12-09 23:26:46.943 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -&gt; org.hibernate.type.OffsetDateTimeType@1e6bd263
+2024-12-09 23:26:46.943 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -&gt; org.hibernate.type.OffsetDateTimeType@1e6bd263
+2024-12-09 23:26:46.943 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -&gt; org.hibernate.type.OffsetTimeType@58601e7a
+2024-12-09 23:26:46.943 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -&gt; org.hibernate.type.OffsetTimeType@58601e7a
+2024-12-09 23:26:46.944 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -&gt; org.hibernate.type.ZonedDateTimeType@43e8f1c
+2024-12-09 23:26:46.944 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -&gt; org.hibernate.type.ZonedDateTimeType@43e8f1c
+2024-12-09 23:26:46.944 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -&gt; org.hibernate.type.DateType@7871d261
+2024-12-09 23:26:46.944 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -&gt; org.hibernate.type.DateType@7871d261
+2024-12-09 23:26:46.945 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -&gt; org.hibernate.type.TimeType@4f26425b
+2024-12-09 23:26:46.945 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -&gt; org.hibernate.type.TimeType@4f26425b
+2024-12-09 23:26:46.945 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -&gt; org.hibernate.type.TimestampType@4438938e
+2024-12-09 23:26:46.945 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -&gt; org.hibernate.type.TimestampType@4438938e
+2024-12-09 23:26:46.945 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -&gt; org.hibernate.type.TimestampType@4438938e
+2024-12-09 23:26:46.946 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -&gt; org.hibernate.type.DbTimestampType@91a2543
+2024-12-09 23:26:46.946 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -&gt; org.hibernate.type.CalendarType@5fb7ab9c
+2024-12-09 23:26:46.946 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -&gt; org.hibernate.type.CalendarType@5fb7ab9c
+2024-12-09 23:26:46.946 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -&gt; org.hibernate.type.CalendarType@5fb7ab9c
+2024-12-09 23:26:46.946 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -&gt; org.hibernate.type.CalendarDateType@6ee37ca7
+2024-12-09 23:26:46.947 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -&gt; org.hibernate.type.CalendarTimeType@7fc7152e
+2024-12-09 23:26:46.947 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -&gt; org.hibernate.type.LocaleType@12cd129c
+2024-12-09 23:26:46.947 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -&gt; org.hibernate.type.LocaleType@12cd129c
+2024-12-09 23:26:46.947 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -&gt; org.hibernate.type.CurrencyType@51ed2f68
+2024-12-09 23:26:46.947 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -&gt; org.hibernate.type.CurrencyType@51ed2f68
+2024-12-09 23:26:46.948 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -&gt; org.hibernate.type.TimeZoneType@4fbaa7f5
+2024-12-09 23:26:46.948 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -&gt; org.hibernate.type.TimeZoneType@4fbaa7f5
+2024-12-09 23:26:46.948 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -&gt; org.hibernate.type.ClassType@597a7afa
+2024-12-09 23:26:46.948 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -&gt; org.hibernate.type.ClassType@597a7afa
+2024-12-09 23:26:46.948 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -&gt; org.hibernate.type.UUIDBinaryType@5599b5bb
+2024-12-09 23:26:46.948 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -&gt; org.hibernate.type.UUIDBinaryType@5599b5bb
+2024-12-09 23:26:46.948 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -&gt; org.hibernate.type.UUIDCharType@7cd3e0da
+2024-12-09 23:26:46.949 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -&gt; org.hibernate.type.BinaryType@19705650
+2024-12-09 23:26:46.949 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -&gt; org.hibernate.type.BinaryType@19705650
+2024-12-09 23:26:46.949 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -&gt; org.hibernate.type.BinaryType@19705650
+2024-12-09 23:26:46.949 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -&gt; org.hibernate.type.WrapperBinaryType@6b9697ae
+2024-12-09 23:26:46.949 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -&gt; org.hibernate.type.WrapperBinaryType@6b9697ae
+2024-12-09 23:26:46.949 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -&gt; org.hibernate.type.WrapperBinaryType@6b9697ae
+2024-12-09 23:26:46.950 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -&gt; org.hibernate.type.RowVersionType@6a6da47a
+2024-12-09 23:26:46.950 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -&gt; org.hibernate.type.ImageType@44aa91e2
+2024-12-09 23:26:46.951 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -&gt; org.hibernate.type.CharArrayType@49ced9c7
+2024-12-09 23:26:46.951 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -&gt; org.hibernate.type.CharArrayType@49ced9c7
+2024-12-09 23:26:46.951 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -&gt; org.hibernate.type.CharArrayType@49ced9c7
+2024-12-09 23:26:46.952 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -&gt; org.hibernate.type.CharacterArrayType@5c4f4330
+2024-12-09 23:26:46.952 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -&gt; org.hibernate.type.CharacterArrayType@5c4f4330
+2024-12-09 23:26:46.952 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -&gt; org.hibernate.type.CharacterArrayType@5c4f4330
+2024-12-09 23:26:46.953 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -&gt; org.hibernate.type.TextType@59a09be
+2024-12-09 23:26:46.953 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -&gt; org.hibernate.type.NTextType@796c68bf
+2024-12-09 23:26:46.954 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -&gt; org.hibernate.type.BlobType@42107318
+2024-12-09 23:26:46.954 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -&gt; org.hibernate.type.BlobType@42107318
+2024-12-09 23:26:46.954 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -&gt; org.hibernate.type.MaterializedBlobType@5dfc2a4
+2024-12-09 23:26:46.954 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -&gt; org.hibernate.type.ClobType@3c60c681
+2024-12-09 23:26:46.954 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -&gt; org.hibernate.type.ClobType@3c60c681
+2024-12-09 23:26:46.955 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -&gt; org.hibernate.type.NClobType@36211bbc
+2024-12-09 23:26:46.955 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -&gt; org.hibernate.type.NClobType@36211bbc
+2024-12-09 23:26:46.955 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -&gt; org.hibernate.type.MaterializedClobType@d70e9a
+2024-12-09 23:26:46.955 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -&gt; org.hibernate.type.MaterializedNClobType@61808ecd
+2024-12-09 23:26:46.956 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -&gt; org.hibernate.type.SerializableType@3d4ecc67
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -&gt; org.hibernate.type.ObjectType@6d7740f0
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -&gt; org.hibernate.type.ObjectType@6d7740f0
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -&gt; org.hibernate.type.AdaptedImmutableType@63db743d
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -&gt; org.hibernate.type.AdaptedImmutableType@496cedbb
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -&gt; org.hibernate.type.AdaptedImmutableType@6b6def36
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -&gt; org.hibernate.type.AdaptedImmutableType@3957d88b
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -&gt; org.hibernate.type.AdaptedImmutableType@1152900
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -&gt; org.hibernate.type.AdaptedImmutableType@2fba0dac
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -&gt; org.hibernate.type.AdaptedImmutableType@2b2a4332
+2024-12-09 23:26:46.958 DEBUG 17039 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -&gt; org.hibernate.type.AdaptedImmutableType@2cbe455c
+2024-12-09 23:26:46.976  INFO 17039 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-09 23:26:47.081  INFO 17039 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-09 23:26:47.103  INFO 17039 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-09 23:26:47.144 DEBUG 17039 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2e40fdbd] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@246de37e]
+2024-12-09 23:26:47.287 DEBUG 17039 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2e40fdbd] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@2d3eecda]
 Hibernate: 
     
     create table cart_tb (
@@ -1616,20 +1495,19 @@ Hibernate:
        add constraint FK9wkv8x8yfgaaquhn4vquq4aps 
        foreign key (user_id) 
        references user_tb
-2024-12-09 00:32:05.702  INFO 88255 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-12-09 00:32:05.706 TRACE 88255 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@236a4d30] for TypeConfiguration
-2024-12-09 00:32:05.706  INFO 88255 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-09 00:32:06.495  INFO 88255 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76ffd052, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ebb36df, org.springframework.security.web.context.SecurityContextPersistenceFilter@77185a2, org.springframework.security.web.header.HeaderWriterFilter@2fd409c1, org.springframework.web.filter.CorsFilter@1f4de96e, org.springframework.security.web.authentication.logout.LogoutFilter@4f93a8f6, com.example.kakao._core.security.JwtAuthenticationFilter@46c61d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ae5e1cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f9979cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c194c4e, org.springframework.security.web.session.SessionManagementFilter@6e5a77ef, org.springframework.security.web.access.ExceptionTranslationFilter@401d83ce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@753c7411]
-2024-12-09 00:32:06.663  INFO 88255 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
-2024-12-09 00:32:06.844  INFO 88255 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-12-09 00:32:06.844  INFO 88255 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-12-09 00:32:06.845  INFO 88255 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-12-09 00:32:06.857  INFO 88255 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Started CartRestControllerTest in 2.491 seconds (JVM running for 3.074)
-2024-12-09 00:32:06.883  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@125df632]
+2024-12-09 23:26:47.478  INFO 17039 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-09 23:26:47.481 TRACE 17039 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@2d3eecda] for TypeConfiguration
+2024-12-09 23:26:47.482  INFO 17039 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:26:48.590  INFO 17039 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4bd39edc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ba50851, org.springframework.security.web.context.SecurityContextPersistenceFilter@212be8c, org.springframework.security.web.header.HeaderWriterFilter@13f17b8f, org.springframework.web.filter.CorsFilter@5c20841d, org.springframework.security.web.authentication.logout.LogoutFilter@43c64d6f, com.example.kakao._core.security.JwtAuthenticationFilter@1a1dd8eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@df34b01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@703947bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4def900a, org.springframework.security.web.session.SessionManagementFilter@1fc4b8d6, org.springframework.security.web.access.ExceptionTranslationFilter@7fa2473a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76641439]
+2024-12-09 23:26:48.761  INFO 17039 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
+2024-12-09 23:26:48.940  INFO 17039 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-09 23:26:48.940  INFO 17039 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-09 23:26:48.941  INFO 17039 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-12-09 23:26:48.952  INFO 17039 --- [    Test worker] c.e.kakao.cart.CartRestControllerTest    : Started CartRestControllerTest in 2.933 seconds (JVM running for 3.559)
+2024-12-09 23:26:48.972  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@3c8c5513]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -1713,28 +1591,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:06.962  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@4c3125ff]
+2024-12-09 23:26:49.047  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@57e83608]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -1818,28 +1685,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:06.969  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@7f680a9a]
+2024-12-09 23:26:49.051  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@514eefc4]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -1923,28 +1779,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:06.977  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@4f45290f]
+2024-12-09 23:26:49.056  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@6aa7d7a0]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2028,28 +1873,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:06.986  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@56511eda]
+2024-12-09 23:26:49.062  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_fail400_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@2b26d289]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2133,28 +1967,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:06.993  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAllNotAuthorization_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@3b9d85c2]
+2024-12-09 23:26:49.068  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAllNotAuthorization_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@526a1b51]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2238,28 +2061,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:07.000  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_cart_404_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@be56353]
+2024-12-09 23:26:49.074  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_cart_404_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@54632794]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2343,28 +2155,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:07.006  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@6ccd3cf1]
+2024-12-09 23:26:49.080  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_duplicated_options_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@760f4310]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2448,28 +2249,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:07.018  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@eaf3dd0]
+2024-12-09 23:26:49.090  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.addCartList_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@6ccd3cf1]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2553,28 +2343,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:07.026  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@1e470a51]
+2024-12-09 23:26:49.093  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.update_not_found_option_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@557f0a39]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2658,28 +2437,17 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
-2024-12-09 00:32:07.032  WARN 88255 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAll_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@21143041]
+2024-12-09 23:26:49.099  WARN 17039 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2552f2cb] for test method [public void com.example.kakao.cart.CartRestControllerTest.findAll_test() throws java.lang.Exception] and test instance [com.example.kakao.cart.CartRestControllerTest@23acd55e]
 
-org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #9 of class path resource [db/teardown.sql]: use `coupon`; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.24.jar:5.3.24]
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [db/teardown.sql]; nested exception is java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.3.24.jar:5.3.24]
@@ -2763,21 +2531,11 @@ use `coupon` [90079-214]
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema &quot;COUPON&quot; not found; SQL statement:
-use `coupon` [90079-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.Database.getSchema(Database.java:1546) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Set.update(Set.java:397) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.24.jar:5.3.24]
+Caused by: java.io.FileNotFoundException: class path resource [db/teardown.sql] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.3.24.jar:5.3.24]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236) ~[spring-jdbc-5.3.24.jar:5.3.24]
 	... 83 common frames omitted
 
 </pre>
@@ -2791,7 +2549,7 @@ use `coupon` [90079-214]
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.0</a> at Dec 9, 2024, 12:32:07 AM</p>
+<a href="http://www.gradle.org">Gradle 8.0</a> at Dec 9, 2024, 11:26:49 PM</p>
 </div>
 </div>
 </body>

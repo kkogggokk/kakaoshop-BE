@@ -21,20 +21,21 @@ import java.util.Map;
 public class CouponController {
 
     private final RestTemplate client;
-    private final String COUPON_BACKEND_URL = "http://127.0.0.1:80"; // CHECK
+    private final String COUPON_BACKEND_URL = "http://localhost:8080"; // CHECK
 
-    @PostMapping("/v1")
+    @PostMapping("/v1/issue")
     public ResponseEntity<?> registerCouponV1(@RequestBody CouponRegisterRequest request, @AuthenticationPrincipal CustomUserDetails userDetails) {
         request.setUserId((long) userDetails.getUser().getId());
-        log.info("request[{}]", request);
+        log.info("/v1/issue: request[{}]", request);
 
         return ResponseEntity.ok(client.postForObject(COUPON_BACKEND_URL + "/v1/issue", request, Map.class));
     }
 
-    @PostMapping("/v2")
-    public ResponseEntity<?> registerCouponV2(@RequestBody CouponRegisterRequest request) {
-        log.info("request[{}]", request);
-
-        return ResponseEntity.ok(client.postForObject(COUPON_BACKEND_URL + "/v2/issue", request, Map.class));
+    // v2/async  추가 필요
+    @PostMapping("/v2/issue-async")
+    public ResponseEntity<?> registerCouponV3(@RequestBody CouponRegisterRequest request) {
+        log.info("/v2/issue-async: request[{}]", request);
+        return ResponseEntity.ok(client.postForObject(COUPON_BACKEND_URL + "/v2/issue-async", request, Map.class));
     }
+
 }
