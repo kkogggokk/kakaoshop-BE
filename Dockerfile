@@ -1,3 +1,4 @@
+# kakaoshop-BE 컨테이너 이미지
 FROM --platform=$BUILDPLATFORM gradle:8-jdk17 AS build
 WORKDIR /home/gradle
 COPY . /home/gradle

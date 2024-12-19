@@ -32,6 +32,8 @@ public class ErrorLog {
     public void onCreate(){
         createdAt = LocalDateTime.now();
     }
+    // v0.2.2 CouponIssue Validation - CouponIssue 트랜잭션 기능
+    // - @PrePersist 메서드를 추가하여 dateIssued가 null일 경우 자동으로 현재 시간을 설정
 
     @Builder
     public ErrorLog(int id, Integer userId, String userIp, String userAgent, String message, LocalDateTime createdAt) {

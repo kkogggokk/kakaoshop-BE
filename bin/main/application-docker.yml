@@ -1,13 +1,17 @@
 server:
+  port: 8080
   servlet:
     encoding:
       charset: utf-8
       force: true
-  port: 8080
-
 spring:
+  applicaion:
+      name: kakao-be
+  config:
+    activate:
+      on-profile: docker
   datasource:
-    url: jdbc:mysql://coupon-mysql:3306/coupon?useUnicode=yes&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    url: jdbc:mysql://coupon-mysql:3306/coupon
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: abcd
     password: 1234
@@ -16,10 +20,16 @@ spring:
       ddl-auto: update
     show-sql: true
 
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
 logging:
   level:
     '[com.example.kakao]': DEBUG
     '[org.hibernate.type]': TRACE
-
-file:
-  path: ./images/
