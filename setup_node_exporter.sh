@@ -17,7 +17,7 @@ NODE_EXPORTER_URL="https://github.com/prometheus/node_exporter/releases/download
 INSTALL_DIR="/usr/local/bin"
 
 echo "[-] Downloading Node Exporter version ${NODE_EXPORTER_VERSION}..."
-curl -L ${NODE_EXPORTER_URL} | tar xvfz
+curl -L ${NODE_EXPORTER_URL} | tar xz
 
 echo "[-] Installing Node Exporter to ${INSTALL_DIR}..."
 mv node_exporter-${NODE_EXPORTER_VERSION}.linux-amd64/node_exporter ${INSTALL_DIR}/
